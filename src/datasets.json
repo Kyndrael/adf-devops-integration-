@@ -1,1 +1,18 @@
 
+{
+  "name": "DS_Clientes",
+  "properties": {
+    "linkedServiceName": { "referenceName": "LS_Blob_Storage", "type": "LinkedServiceReference" },
+    "type": "DelimitedText",
+    "typeProperties": {
+      "location": {
+        "type": "AzureBlobStorageLocation",
+        "container": "datalake",
+        "folderPath": "raw/clientes",
+        "fileName": "Clientes_@{pipeline().RunId}.txt"
+      },
+      "columnDelimiter": ";",
+      "firstRowAsHeader": true
+    }
+  }
+}
