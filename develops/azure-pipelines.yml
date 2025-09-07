@@ -1,1 +1,23 @@
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '3.x'
+
+  - script: |
+      echo "Validando artefatos do ADF..."
+      ls src/
+    displayName: 'Check ADF artifacts'
+
+  - script: |
+      echo "Sincronizando com Azure Data Factory..."
+      # Aqui poderia usar ADF REST API ou PowerShell/CLI para deploy
+    displayName: 'Deploy para ADF'
 
