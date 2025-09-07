@@ -1,1 +1,18 @@
 
+{
+  "name": "PL_Copia_Clientes",
+  "properties": {
+    "activities": [
+      {
+        "name": "Copy_Clientes",
+        "type": "Copy",
+        "typeProperties": {
+          "source": { "type": "SqlSource" },
+          "sink": { "type": "DelimitedTextSink" }
+        },
+        "inputs": [{ "referenceName": "DS_SQL_Clientes", "type": "DatasetReference" }],
+        "outputs": [{ "referenceName": "DS_Clientes", "type": "DatasetReference" }]
+      }
+    ]
+  }
+}
