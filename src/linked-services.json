@@ -1,1 +1,10 @@
+{
+  "name": "LS_Blob_Storage",
+  "properties": {
+    "type": "AzureBlobStorage",
+    "typeProperties": {
+      "connectionString": "DefaultEndpointsProtocol=https;AccountName=nomedaconta;AccountKey=<sua_chave>"
+    }
+  }
+}
 
